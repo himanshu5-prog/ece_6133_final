@@ -1,0 +1,16 @@
+Thu Apr 16 19:09:19 2020
+
+Width: 287 height: 287| standard cell row count: 103
+net_count: 5742 cell_count: 6514
+PART1: Spreading of cells starts
+area constraint: 0.05
+Using BFS
+After spreading the cells, Wirelength: 651450
+PART1 ENDS: done spreading the cell
+PART2 Starts: Now placing the cells
+cell count: 6514 row used: 92 out of 103
+Effective cell height: 256.2 aspect-ratio: 0.892683
+PART2 Ends: Done placing the cells
+After placing the cells, wirelength: 662790
+csv file name: ./output/biomedP_bfs_0.csv
+( mode: 0) Time taken : 23 seconds ( 23019652 microseconds) Final WL: 662790

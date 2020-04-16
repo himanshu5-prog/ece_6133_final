@@ -1,0 +1,16 @@
+Thu Apr 16 19:21:18 2020
+
+Width: 154 height: 154| standard cell row count: 55
+net_count: 1920 cell_count: 1952
+PART1: Spreading of cells starts
+area constraint: 0.04
+Using DFS
+After spreading the cells, Wirelength: 146493
+PART1 ENDS: done spreading the cell
+PART2 Starts: Now placing the cells
+cell count: 1952 row used: 51 out of 55
+Effective cell height: 141.4 aspect-ratio: 0.918182
+PART2 Ends: Done placing the cells
+After placing the cells, wirelength: 154269
+csv file name: ./output/structP_dfs_2.csv
+( mode: 2) Time taken : 0 seconds ( 797570 microseconds) Final WL: 154269

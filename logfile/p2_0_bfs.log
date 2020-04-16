@@ -1,0 +1,16 @@
+Thu Apr 16 19:10:34 2020
+
+Width: 189 height: 189| standard cell row count: 68
+net_count: 3029 cell_count: 3014
+PART1: Spreading of cells starts
+area constraint: 0.045
+Using BFS
+After spreading the cells, Wirelength: 309408
+PART1 ENDS: done spreading the cell
+PART2 Starts: Now placing the cells
+cell count: 3014 row used: 64 out of 68
+Effective cell height: 177.8 aspect-ratio: 0.940741
+PART2 Ends: Done placing the cells
+After placing the cells, wirelength: 315554
+csv file name: ./output/p2_bfs_0.csv
+( mode: 0) Time taken : 2 seconds ( 2313098 microseconds) Final WL: 315554

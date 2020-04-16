@@ -1,0 +1,16 @@
+Thu Apr 16 19:21:19 2020
+
+Width: 399 height: 399| standard cell row count: 143
+net_count: 13419 cell_count: 12637
+PART1: Spreading of cells starts
+area constraint: 0.04
+Using DFS
+After spreading the cells, Wirelength: 2469531
+PART1 ENDS: done spreading the cell
+PART2 Starts: Now placing the cells
+cell count: 12637 row used: 128 out of 143
+Effective cell height: 357 aspect-ratio: 0.894737
+PART2 Ends: Done placing the cells
+After placing the cells, wirelength: 2402109
+csv file name: ./output/industry2_dfs_0.csv
+( mode: 0) Time taken : 47 seconds ( 47417182 microseconds) Final WL: 2402109

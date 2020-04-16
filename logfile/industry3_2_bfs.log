@@ -1,0 +1,16 @@
+Thu Apr 16 19:17:00 2020
+
+Width: 441 height: 441| standard cell row count: 158
+net_count: 21923 cell_count: 15406
+PART1: Spreading of cells starts
+area constraint: 0.045
+Using BFS
+After spreading the cells, Wirelength: 2816838
+PART1 ENDS: done spreading the cell
+PART2 Starts: Now placing the cells
+cell count: 15364 row used: 141 out of 158
+Effective cell height: 393.4 aspect-ratio: 0.892063
+PART2 Ends: Done placing the cells
+After placing the cells, wirelength: 2947885
+csv file name: ./output/industry3_bfs_2.csv
+( mode: 2) Time taken : 168 seconds ( 168954732 microseconds) Final WL: 2947885

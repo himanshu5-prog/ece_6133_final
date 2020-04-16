@@ -1,0 +1,2 @@
+This directory contains hgr and dim file for the circuit. 
+All circuits' hgr and dim file should be copied to this directory before running the placer.

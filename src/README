@@ -1,0 +1,19 @@
+This directory contains C++ files used in placement engine.
+
+1) min_cut.cpp : This is the top-level file
+
+2) cell.h: This contains data structure for cell.
+
+3) row.h: This contains data structure for placement row.
+
+4) placementStrategy.h : This file contains functions for cell placement.
+
+5) fileRead.h: This file contains function to read information from files.
+
+6) create_data_structure.h : This file contains function to create data structures to represent netlist
+
+7) fm_algo_2.h : This file contains function to implement FM Algorithm for partitioning.
+
+8) print_functions.h : This function contains print function which can be used for debugging. 
+    		       Currently, this is not used in placer. This could be appended to help in debugging.
+ 
