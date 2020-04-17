@@ -21,7 +21,7 @@ Following are the files/directory description:
 5) output: This directory contains csv file which contains coordinates of each cell along with its width.
 	The format of csv file is: x-coordinate of left-bottom corner,y-coordinate of left-bottom corner,width of cell
 
-6) src: This directory contains C++ files. min_cut.cpp is the top-level file. Code is written C++.
+6) src: This directory contains C++ files. min_cut.cpp is the top-level file. Code is written in C++.
 
 7) run_all.sh : This script run placement with all modes and configurations. Internally, it source bfs.sh and dfs.sh
 
