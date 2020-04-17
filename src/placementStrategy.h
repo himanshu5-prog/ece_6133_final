@@ -4,6 +4,7 @@
 //Description: This file contains function to implement final cell placement 
 //--------------------------------------------------------------------------
 #include<iostream>
+#include<cmath>
 using namespace std;
 
 void min_cut_placement_bfs(int cell_count, vector<Cell> &cell_list,bool p_type, int count_threshold, vector<int> cell_net_list[], vector<Cell> detailed_net_list[],
@@ -512,4 +513,47 @@ void generateRowData(Row *row, int rowCount, ofstream& output_logfile)
 		sum += row[i].cell_list.size();
 	}
 	output_logfile<<"Total cell placed: "<<sum<<endl;
+}
+
+void generateData (Row *row, int rowCount, double chipWidth, ofstream& output_logfile)
+{
+	double mean_occupancy = 0;
+	double sum_occupancy=0;
+	int valid_row = 0;
+
+	for(int i=0; i < rowCount; i++)
+	{
+		if(row[i].cell_list.size() == 0)
+			break;
+		
+		sum_occupancy += row[i].rowPointer/chipWidth;
+		valid_row++;
+	}
+	assert(valid_row > 1);
+	cout<<"last occupancy: "<<row[valid_row - 1].rowPointer/chipWidth<<endl;
+	cout<<"valid_row: "<<valid_row<<endl;
+	sum_occupancy = sum_occupancy - ((row[valid_row - 1].rowPointer)/chipWidth );
+	mean_occupancy = sum_occupancy/(valid_row - 1);
+	cout<<"Mean occupancy: "<<mean_occupancy<<endl;
+	output_logfile<<"Mean occupancy: "<<mean_occupancy<<endl;
+	double square_diff = 0;
+	double occupancy = 0;
+	double var=0;
+	double standardDeviation = 0;
+	for(int i=0; i<valid_row - 1; i++)
+	{
+		if(row[i].cell_list.size() == 0)
+                        break;
+		
+		occupancy = row[i].rowPointer/chipWidth;
+		//cout<<"occupancy: "<<occupancy<<endl;
+		//if (occupancy > 1)
+		//	cout<<"out of chip!!   occupancy: "<<occupancy<<endl;
+		square_diff += ((occupancy - mean_occupancy)*(occupancy - mean_occupancy));
+		
+	}
+	var = square_diff/(valid_row - 1);
+	standardDeviation = sqrt(var);
+	cout<<"standard deviation: "<<standardDeviation<<endl;			
+	output_logfile<<"standard deviation: "<<standardDeviation<<endl;			
 }

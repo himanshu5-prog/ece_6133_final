@@ -1,4 +1,4 @@
-Thu Apr 16 19:10:42 2020
+Fri Apr 17 04:12:53 2020
 
 Width: 154 height: 154| standard cell row count: 55
 net_count: 1920 cell_count: 1952
@@ -13,4 +13,6 @@ Effective cell height: 141.4 aspect-ratio: 0.918182
 PART2 Ends: Done placing the cells
 After placing the cells, wirelength: 120068
 csv file name: ./output/structP_bfs_0.csv
-( mode: 0) Time taken : 0 seconds ( 524825 microseconds) Final WL: 120068
+Mean occupancy: 0.98313
+standard deviation: 0.0170928
+( mode: 0) Time taken : 0 seconds ( 529413 microseconds) Final WL: 120068

@@ -1,7 +1,7 @@
 make all
 
 echo "Placement using BFS partitoning starts"
-### Note: Circuit input files are present in input directory.
+### Note: Circuit input files are present in input directory #######################################################
 ### Running placement on biomedP ###################################################################################
 echo "------------------Processing biomedP-------------------------------------------------------------------------"
 ./min_cut.out -hgr_file biomedP.hgr -dim_file biomedP.dim -mode 0 -partition_type 1 -area_constraint 0.05 -verbose 0

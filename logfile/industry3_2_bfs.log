@@ -1,4 +1,4 @@
-Thu Apr 16 19:17:00 2020
+Fri Apr 17 04:19:02 2020
 
 Width: 441 height: 441| standard cell row count: 158
 net_count: 21923 cell_count: 15406
@@ -13,4 +13,6 @@ Effective cell height: 393.4 aspect-ratio: 0.892063
 PART2 Ends: Done placing the cells
 After placing the cells, wirelength: 2947885
 csv file name: ./output/industry3_bfs_2.csv
-( mode: 2) Time taken : 168 seconds ( 168954732 microseconds) Final WL: 2947885
+Mean occupancy: 0.993193
+standard deviation: 0.00593526
+( mode: 2) Time taken : 160 seconds ( 160595011 microseconds) Final WL: 2947885

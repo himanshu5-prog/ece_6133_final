@@ -331,6 +331,7 @@ int main(int argc, char* argv[])
         //cout<<"csv file name: "<<csv_file<<endl;	 
         output_logfile<<"csv file name: ./output/"<<csv_file<<endl;	 
 	generateCSV(finalPlacement,widthCell, csv_file);
+	generateData (row,rowCount,chipWidth, output_logfile);
 	//---------------------------------------------------
 	if(verbose)
 		generateRowData(row,rowCount, output_logfile);

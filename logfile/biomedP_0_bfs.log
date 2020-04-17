@@ -1,4 +1,4 @@
-Thu Apr 16 19:09:19 2020
+Fri Apr 17 04:11:32 2020
 
 Width: 287 height: 287| standard cell row count: 103
 net_count: 5742 cell_count: 6514
@@ -13,4 +13,6 @@ Effective cell height: 256.2 aspect-ratio: 0.892683
 PART2 Ends: Done placing the cells
 After placing the cells, wirelength: 662790
 csv file name: ./output/biomedP_bfs_0.csv
-( mode: 0) Time taken : 23 seconds ( 23019652 microseconds) Final WL: 662790
+Mean occupancy: 0.990438
+standard deviation: 0.00844007
+( mode: 0) Time taken : 21 seconds ( 21412496 microseconds) Final WL: 662790

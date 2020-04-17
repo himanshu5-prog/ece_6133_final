@@ -1,4 +1,4 @@
-Thu Apr 16 19:10:37 2020
+Fri Apr 17 04:12:47 2020
 
 Width: 189 height: 189| standard cell row count: 68
 net_count: 3029 cell_count: 3014
@@ -13,4 +13,6 @@ Effective cell height: 180.6 aspect-ratio: 0.955556
 PART2 Ends: Done placing the cells
 After placing the cells, wirelength: 210922
 csv file name: ./output/p2_bfs_1.csv
-( mode: 1) Time taken : 2 seconds ( 2429598 microseconds) Final WL: 210922
+Mean occupancy: 0.984171
+standard deviation: 0.0109135
+( mode: 1) Time taken : 2 seconds ( 2451993 microseconds) Final WL: 210922
