@@ -25,7 +25,8 @@ Following are the files/directory description:
 
 7) run_all.sh : This script run placement with all modes and configurations. Internally, it source bfs.sh and dfs.sh
 
-8) sample_script.sh: This script can be used to run any other circuit. Make sure, hgr and dim files are copied to input directory. Change the hgr and dim file in sample_script.sh
+8) sample_script.sh: This script can be used to run any other circuit. Make sure, hgr and dim files are copied to input directory. 
+   Change the hgr and dim file in sample_script.sh
 
 9) makefile: 	Use 'make all' for compilation.
 		Use 'make clear' to clear output, logfile directory and executable file: min_cut.out
