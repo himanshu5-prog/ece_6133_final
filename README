@@ -3,13 +3,7 @@
 							Final Project
 					 Min-cut placement with terminal propagation
 
-<<<<<<< HEAD
-Team Members:
-	Himanshu Yadav
-	Kevin Abraham
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
-=======
->>>>>>> 97bf2946ebc0ea6cbc6b2dd3f4d857237f0cfbc5
 Following are the files/directory description:
 
 1) dfs.sh : Script to execute placement in depth-first search partitioning in various mode of operation
