@@ -353,7 +353,7 @@ double chipWidth, const double *widthCell, ofstream &output_logfile)
 		cout<<"cell count: "<<sum_cell<<" row used: "<<row_id + 1<<" out of "<<rowCount<<endl;
 		output_logfile<<"cell count: "<<sum_cell<<" row used: "<<row_id + 1<<" out of "<<rowCount<<endl;
 		cout<<"Effective cell height: "<<floorplan_height<<" aspect-ratio: "<<floorplan_height/chipWidth<<endl; 
-		output_logfile<<"Effective cell height: "<<floorplan_height<<" aspect-ratio: "<<floorplan_height/chipWidth<<endl; 
+		output_logfile<<"ECE6133 :: aspect-ratio: "<<floorplan_height/chipWidth<<endl; 
 		vector< pair<int, double> > vec_x;
 		int cell_id_row;
 		for(int i=0; i<rowCount; i++)
@@ -530,12 +530,12 @@ void generateData (Row *row, int rowCount, double chipWidth, ofstream& output_lo
 		valid_row++;
 	}
 	assert(valid_row > 1);
-	cout<<"last occupancy: "<<row[valid_row - 1].rowPointer/chipWidth<<endl;
-	cout<<"valid_row: "<<valid_row<<endl;
+	//cout<<"last occupancy: "<<row[valid_row - 1].rowPointer/chipWidth<<endl;
+	//cout<<"valid_row: "<<valid_row<<endl;
 	sum_occupancy = sum_occupancy - ((row[valid_row - 1].rowPointer)/chipWidth );
 	mean_occupancy = sum_occupancy/(valid_row - 1);
 	cout<<"Mean occupancy: "<<mean_occupancy<<endl;
-	output_logfile<<"Mean occupancy: "<<mean_occupancy<<endl;
+	output_logfile<<"ECE6133 :: Mean occupancy: "<<mean_occupancy<<endl;
 	double square_diff = 0;
 	double occupancy = 0;
 	double var=0;
@@ -552,8 +552,8 @@ void generateData (Row *row, int rowCount, double chipWidth, ofstream& output_lo
 		square_diff += ((occupancy - mean_occupancy)*(occupancy - mean_occupancy));
 		
 	}
-	var = square_diff/(valid_row - 1);
+	var = square_diff/(valid_row - 1 );
 	standardDeviation = sqrt(var);
 	cout<<"standard deviation: "<<standardDeviation<<endl;			
-	output_logfile<<"standard deviation: "<<standardDeviation<<endl;			
+	output_logfile<<"ECE6133 :: standard deviation: "<<standardDeviation<<endl;			
 }

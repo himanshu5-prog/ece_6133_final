@@ -197,6 +197,7 @@ int main(int argc, char* argv[])
     string bfs_dfs = "bfs";
     if(partitionStrategy == false)  bfs_dfs = "dfs";
     string logfile = "logfile/" + circuit + "_" + to_string(Mode) + "_" +  bfs_dfs + ".log";
+    string wire_coord_file =  circuit + "_" + to_string(Mode) + "_" +  bfs_dfs + "_wire_coord_" + ".csv";
     cout<<"log file name: "<<logfile<<endl;
 	//string log2 = "circuit.log";
 	ofstream output_logfile;
@@ -322,12 +323,14 @@ int main(int argc, char* argv[])
 	//performFinalPlacement_2(row,rowCount,rowHeight,global_cell_list1,finalPlacement, cell_count, chipWidth, widthCell);
 	cout<<"PART2 Ends: Done placing the cells\n";	
 	output_logfile<<"PART2 Ends: Done placing the cells\n";	
-	unsigned int wl2 = compute_wirelength_2(detailed_net_list,finalPlacement,net_count);
+	unsigned int wl2 = compute_wirelength_2(detailed_net_list,finalPlacement,net_count, wire_coord_file, chipWidth);
 	cout<<"After placing the cells, wirelength: "<<wl2<<endl;
 	output_logfile<<"After placing the cells, wirelength: "<<wl2<<endl;
 	
 	//Generating CSV file that has coordinate of each cell
-	string csv_file = circuit + "_" + p_strat + "_" + to_string(mode) + ".csv";
+	//string csv_file = circuit + "_" + p_strat + "_" + to_string(mode) + ".csv";
+	
+	string csv_file = circuit + "_" + to_string(mode) + "_" + p_strat + ".csv";
         //cout<<"csv file name: "<<csv_file<<endl;	 
         output_logfile<<"csv file name: ./output/"<<csv_file<<endl;	 
 	generateCSV(finalPlacement,widthCell, csv_file);
@@ -340,7 +343,7 @@ int main(int argc, char* argv[])
 	auto duration = duration_cast<microseconds>(stop - start); 
 	
 	cout <<"( mode: "<<mode<< ") Time taken : "<< duration.count()/1000000 << " seconds" <<" ( "<< duration.count()<<" microseconds) Final WL: "<<wl2<< endl;
-	output_logfile <<"( mode: "<<mode<< ") Time taken : "<< duration.count()/1000000 << " seconds" <<" ( "<< duration.count()<<" microseconds) Final WL: "<<wl2<< endl;
+	output_logfile <<"ECE6133 :: ( mode: "<<mode<< ") Time taken : "<< duration.count()/1000000 << " seconds" <<" ( "<< duration.count()<<" microseconds) Final WL: "<<wl2<< endl;
         output_logfile.close(); 
 	return 0;
 }

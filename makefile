@@ -39,7 +39,7 @@ help:
 	@echo ""
 	@echo "4) -partition_type (0,1) : Provide how partitioning should be done (Default: 1)(0: DFS | 1: BFS)"
 	@echo ""
-	@echo "5) -area_constraint ( any value between 0 and 0.4 (excluding 0.4) (Default: 0.05) Difference in partition cell_count = area_constraint*total cell count )"
+	@echo "5) -area_constraint ( any value between 0 and 0.4 (excluding 0.4) (Default: 0.05) Maximum Difference in partition cell_count = area_constraint*total cell count )"
 	@echo ""
 	@echo "6) -verbose (0,1): When set to 1, detailed log file is generated. (Default: 0 (brief log file is generated))";
 	@echo ""

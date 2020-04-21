@@ -352,18 +352,28 @@ unsigned int compute_wirelength(vector<Cell> detailed_net_list[], vector<Cell> g
 }
 
 
-unsigned int compute_wirelength_2(vector<Cell> detailed_net_list[], map<int, pair<double,double> > finalPlacement, int net_count)
+unsigned int compute_wirelength_2(vector<Cell> detailed_net_list[], map<int, pair<double,double> > finalPlacement, int net_count, string wire_coord_file, double chipWidth)
 {
 	unsigned int w = 0;
 	int cell_id;
 	int max_x, max_y;
 	int min_x, min_y;
+	ofstream output_file;
+	string op_file = "output/" + wire_coord_file;
+	output_file.open(op_file);
+	double x_coord_min = 0,y_coord_min = 0;
+	double x_coord_max = 0, y_coord_max = 0;	
 	for(int i=0;i<net_count;i++)
 	{
 		max_x = 0;
 		max_y = 0;
 		min_x = 0;
 		min_y = 0;
+		x_coord_min = 0;
+		y_coord_min = 0;
+		x_coord_max = 0;
+		y_coord_max = 0;
+
 		double x_coord;
 		double y_coord;
 		for(int j=0;j < detailed_net_list[i].size();j++)
@@ -382,18 +392,27 @@ unsigned int compute_wirelength_2(vector<Cell> detailed_net_list[], map<int, pai
 					min_x = x_coord;
 					max_y = y_coord;
 					min_y = y_coord;
+					x_coord_min = x_coord;
+                			y_coord_min = y_coord;
+                			x_coord_max = x_coord;
+                			y_coord_max = y_coord;
+
 				}
 				else
 				{
 					if(max_x < x_coord)
 					{
 						max_x = x_coord;
+						x_coord_max = x_coord;
+						y_coord_max = y_coord;
 					}
 					
 					if(min_x > x_coord)
-                    {
-                        min_x = x_coord;
-                    }
+                    			{
+                        			min_x = x_coord;
+						x_coord_min = x_coord;
+                        			y_coord_min = y_coord;
+                    			}
 	
 					if( max_y < y_coord)
 					{
@@ -401,9 +420,9 @@ unsigned int compute_wirelength_2(vector<Cell> detailed_net_list[], map<int, pai
 					}
 					
 					if( min_y > y_coord)
-                    {
-                        min_y = y_coord;
-                    }
+                   			{
+                        			min_y = y_coord;
+                    			}
 
 				}
 			}
@@ -412,8 +431,13 @@ unsigned int compute_wirelength_2(vector<Cell> detailed_net_list[], map<int, pai
 			
 		}
 //		cout<<"For net# "<<i<<" max_x: "<<max_x<<" max_y: "<<max_y<<" min_x: "<<min_x<<" min_y: "<<min_y<<endl;
+		if( max_x + max_y - min_x - min_y > chipWidth/2)
+		{
+			output_file<<min_x<<","<<max_y<<","<<max_x<<","<<min_y<<endl;
+		}
 		w = w + max_x + max_y - min_x - min_y;
 	}
+	output_file.close();
 	return w;
 }
 double compute_abs_diff(double a, double b)

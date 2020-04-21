@@ -6,7 +6,7 @@
 Team Members:
 	Himanshu Yadav
 	Kevin Abraham
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Following are the files/directory description:
 
 1) dfs.sh : Script to execute placement in depth-first search partitioning in various mode of operation
@@ -30,3 +30,32 @@ Following are the files/directory description:
 9) makefile: 	Use 'make all' for compilation.
 		Use 'make clear' to clear output, logfile directory and executable file: min_cut.out
 		Use 'make help' to get information about argument list
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				Running placement on existing circuits in input directory
+
+#To clear old executable, logfile and output file
+make clear
+
+#To run placement using BFS partitioning
+source bfs.sh
+
+#To run placement using DFS partitioning
+source dfs.sh
+
+## Alternatively run_all.sh can be sourced to run placement using both bfs and dfs partitioning
+
+##Logfile is generated in logfile directory. Search "ECE6133" in logfile to find important parameters like wirelength, run-time, aspect-ratio.
+## cell coordinates and wire coordinate is generated in output directory
+				
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+				Running placement on new circuits
+
+1) Copy hgr file and dim file of circuit to input directory
+
+2) Edit sample_script.sh and change the corresponding variable for hgr and dim file. 
+
+3)Use 'source sample_script.sh' to run placement
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
